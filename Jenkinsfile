@@ -25,8 +25,7 @@ pipeline
             
             steps
             {
-                sh "pwd ; ls -lrt" 
-                sh 'mvn compile'
+                sh 'mvn clean install'
             }
         }
     }
