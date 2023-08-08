@@ -4,6 +4,10 @@ pipeline
     {
         label 'slave1'
     }
+    tools
+            {
+                maven 'maven-3.9.4'
+            }
     stages
     {
         stage('SCM_CHECKOUT')
@@ -18,10 +22,7 @@ pipeline
         }
         stage('Maven_Build')
         {
-            tools
-            {
-                maven 'maven-3.9.4'
-            }
+            
             steps
             {
                 sh "pwd ; ls -lrt" 
