@@ -18,10 +18,14 @@ pipeline
         }
         stage('Maven_Build')
         {
+            tools
+            {
+                maven 'maven-3.9.4'
+            }
             steps
             {
                 sh "pwd ; ls -lrt" 
-                //sh 'mvn verify'
+                sh 'mvn compile'
             }
         }
     }
