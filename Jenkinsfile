@@ -20,7 +20,8 @@ pipeline
         {
             steps
             {
-                sh 'mvn verify'
+                sh "pwd ; ls -lrt" 
+                //sh 'mvn verify'
             }
         }
     }
