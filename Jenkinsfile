@@ -1,9 +1,6 @@
 pipeline
 {
-    agent
-    {
-        label 'slave1'
-    }
+    agent any
     tools
             {
                 maven 'maven_3.9.4'
@@ -14,7 +11,7 @@ pipeline
         {
             steps
             {
-                checkout scmGit(branches: [[name: 'origin/master']],
+                checkout scmGit(branches: [[name: 'origin/sonar-build']],
                 userRemoteConfigs: [
                     [ url: 'https://github.com/uriyapraba/fourth-maven-project.git' ]
                 ])
@@ -25,7 +22,7 @@ pipeline
             
             steps
             {
-                sh 'mvn clean install'
+                sh 'mvn clean verify'
             }
         }
     }
