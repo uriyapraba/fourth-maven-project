@@ -83,7 +83,7 @@ pipeline
                 //sh "${scannerHome}/bin/sonar-scanner"
                 sh 'mvn clean verify sonar:sonar \
                     -Dsonar.projectKey=jenkins-intergration-key \
-                    -Dsonar.host.url=http://3.27.140.178:9000 \
+                    -Dsonar.host.url=http://54.253.191.10:9000 \
                     -Dsonar.login=sqp_a8109ea66ee26d41edf3c36dcedb5ef3aab17e8f'
 
                 } 
