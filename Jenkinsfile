@@ -8,11 +8,12 @@ pipeline
             customWorkspace '/home/jenkins/maven-build'
             
         }
-        tools
+    }
+    tools
         {
             maven 'maven_3.9.4'
         }
-    }
+        
     stages
     {
         stage('SCM_checkout')
