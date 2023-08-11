@@ -81,7 +81,7 @@ pipeline
                withSonarQubeEnv('sonarqube-10.1')
                 {
                 //sh "${scannerHome}/bin/sonar-scanner"
-                sh 'mvn clean verify sonar:sonar \
+                 sh 'mvn clean verify sonar:sonar \
                 -Dsonar.projectKey=maven-project \
                 -Dsonar.projectName='maven-project' \
                 -Dsonar.host.url=http://54.253.191.10:9000 \
