@@ -71,7 +71,7 @@ pipeline
         {
             steps
             {
-                sh 'mvn clean package'
+                sh 'mvn clean'
             }
         }
         stage('code-quality')
