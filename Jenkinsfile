@@ -85,6 +85,7 @@ pipeline
                     -Dsonar.projectKey=jenkins-intergration-key \
                     -Dsonar.host.url=http://3.27.140.178:9000 \
                     -Dsonar.login=sqp_a8109ea66ee26d41edf3c36dcedb5ef3aab17e8f'
+
                 } 
             }
         }
