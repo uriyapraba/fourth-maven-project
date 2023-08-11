@@ -13,7 +13,7 @@ pipeline
         {
             maven 'maven_3.9.4'
         }
-        
+
     stages
     {
         stage('SCM_checkout')
@@ -31,6 +31,13 @@ pipeline
             steps
             {
                 sh 'mvn clean package'
+            }
+        }
+        stage('Sonar-code-quality')
+        {
+            steps
+            {
+                sh 'pwd; ls -lrt'
             }
         }
     }
