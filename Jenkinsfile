@@ -8,6 +8,10 @@ pipeline
             customWorkspace '/home/jenkins/maven-build'
             
         }
+        tools
+        {
+            maven 'maven_3.9.4'
+        }
     }
     stages
     {
