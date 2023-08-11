@@ -82,9 +82,10 @@ pipeline
                 {
                 //sh "${scannerHome}/bin/sonar-scanner"
                 sh 'mvn clean verify sonar:sonar \
-                    -Dsonar.projectKey=jenkins-intergration-key \
-                    -Dsonar.host.url=http://54.253.191.10:9000 \
-                    -Dsonar.login=sqp_a8109ea66ee26d41edf3c36dcedb5ef3aab17e8f'
+                -Dsonar.projectKey=maven-project \
+                -Dsonar.projectName='maven-project' \
+                -Dsonar.host.url=http://54.253.191.10:9000 \
+                -Dsonar.token=sqp_d8b3e80202a86e4599633d23f74d1a228039ad58'
 
                 } 
             }
