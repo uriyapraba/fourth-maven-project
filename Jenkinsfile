@@ -15,9 +15,9 @@ pipeline
         {
             steps
             {
-                checkout scmGit(branches: [[name: 'stable-2.289']],
+                checkout scmGit(branches: [[name: 'origin/maven-sonar-build1']],
                 userRemoteConfigs: [
-                    [ url: 'https://github.com/jenkinsci/jenkins.git' ]
+                    [ url: 'https://github.com/uriyapraba/fourth-maven-project.git' ]
                 ])
             }
         }
