@@ -30,7 +30,7 @@ pipeline
         {
             steps
             {
-                sh 'mvn clean package'
+                sh 'mvn clean install'
             }
         }
         stage('Sonar-code-quality')
@@ -44,11 +44,12 @@ pipeline
                 sh 'pwd; ls -lrt'
                 withSonarQubeEnv('sonarqube-10.1')
                 {
-                    sh "mvn sonar:sonar \
+                    /*sh "mvn sonar:sonar \
                     -Dsonar.projectKey=maven-project \
                     -Dsonar.projectName='maven-project' \
                     -Dsonar.host.url=http://13.236.52.185:9000 \
-                    -Dsonar.token=${ACCESS_KEY}"
+                    -Dsonar.token=${ACCESS_KEY}"*/
+                    sh "mvn sonar:sonar"
                 }
             }
         }
