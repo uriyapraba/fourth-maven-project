@@ -45,7 +45,7 @@ pipeline
             }
             steps
             {
-                sh 'pwd; ls -lrt'
+                
                 withSonarQubeEnv('sonarqube-10.1')
                 {
                     sh "mvn sonar:sonar \
