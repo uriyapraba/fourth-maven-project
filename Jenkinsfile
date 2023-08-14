@@ -13,10 +13,10 @@ pipeline
         {
             maven 'maven_3.9.4'
         }
-    triggers
+    /*triggers
         {
             pollSCM('* * * * *')
-        }
+        }*/
 
     stages
     {
